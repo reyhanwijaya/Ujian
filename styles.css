@@ -1,0 +1,225 @@
+/* Menyembunyikan elemen-elemen yang tidak diperlukan */
+.footer, #comments, 
+.post-share-buttons,
+.sidebar-container,
+.post-share-buttons-top, 
+.centered-top-container,
+.centered-top,
+.page-body,
+.blog-name-container,
+h3.post-title {
+    display: none;
+}
+
+.post-body {
+    margin: 0;
+}
+
+.post-outer-container {
+    padding: 0;
+}
+
+.widget.Blog .blog-posts .post-outer-container {
+    padding: 0;
+    min-height: 0;
+}
+
+.widget.Blog .blog-posts .post-outer-container, .widget.PopularPosts {
+    padding: 0;
+}
+
+.page_body .centered {
+    padding: 0;
+    max-width: unset;
+}
+
+/* Menata input-container di tengah layar */
+#input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Styling untuk input dan tombol */
+#link-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#start-btn, #qr-scan-btn, #close-qr-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+#start-btn:hover, #qr-scan-btn:hover, #close-qr-btn:hover {
+    background-color: #45a049;
+}
+
+/* Menyusun proctor-container dan iframe */
+#proctor-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#proctor-frame {
+    width: 100%;
+    flex: 1;
+    border: none;
+    display: none;
+}
+
+.hide {
+    display: none !important; /* Pastikan elemen benar-benar tersembunyi */
+}
+
+#qr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;   /* supaya tidak putih */
+    min-height: 300px;
+}
+
+#qr-video {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Mengatur font secara keseluruhan */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+}
+
+/* styles.css */
+.hide {
+    display: none;
+}
+
+#proctor-frame {
+    width: 100%;
+    height: 500px;
+}
+
+
+/* Menambahkan fitur agar teks tidak bisa di select atau diblok */
+body, p, h1, h2, h3, h4, h5, h6, div, span {
+    -webkit-user-select: none; /* Mencegah seleksi teks di Chrome, Safari */
+    -moz-user-select: none;    /* Mencegah seleksi teks di Firefox */
+    -ms-user-select: none;     /* Mencegah seleksi teks di IE */
+    user-select: none;         /* Mencegah seleksi teks di browser standar */
+}
+
+/* Mencegah drag elemen teks */
+body, p, h1, h2, h3, h4, h5, h6, div, span {
+    -webkit-user-drag: none;   /* Mencegah drag di WebKit (Chrome, Safari) */
+    user-drag: none;           /* Mencegah drag di browser standar */
+}
+/* ICON KECIL */
+#noteToggle {
+    position: absolute;
+    left: 20px;       /* pindah ke kiri */
+    bottom: 20px;     /* tetap di bawah */
+    
+    width: 45px;
+    height: 45px;
+    
+    background: #000;
+    color: white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 50%;
+    cursor: pointer;
+    
+    font-size: 20px;
+    font-weight: bold;
+    
+    z-index: 9999;
+    
+    transition: 0.3s ease;
+}
+
+/* efek hover biar keren */
+#noteToggle:hover {
+    background: #333;
+    transform: scale(1.1);
+}
+
+/* PANEL NOTEPAD */
+#notePanel {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 350px;
+    background: white;
+    display: none;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 99999;
+}
+
+#noteHeader {
+    background: #000;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+#noteArea {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    resize: none;
+    outline: none;
+    font-size: 14px;
+}
+#proctor-container {
+    position: relative;
+}
+
+#noteToggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#notePanel {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    z-index: 9999;
+}
